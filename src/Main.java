@@ -132,7 +132,7 @@ System.out.println("Podaj liczbe");
 
 
         //5
-        System.out.println("Podaj znak");
+        System.out.println("Podaj slowo");
         Scanner sc = new Scanner(System.in);
 
 
@@ -151,13 +151,19 @@ System.out.println("Podaj liczbe");
 
         System.out.println("Ilosc ostatniej litery: " + Integer.toString(licznikOstatniaLitera ));
        //6
-        for (char znak : chars) {
+        System.out.println("Podaj tekst z cyframi np. Ala ma 3 koty i 2 psy");
+        Scanner sc2 = new Scanner(System.in);
+
+
+        String str2 = sc2.nextLine();
+        char[] chars2 = str2.toCharArray();
+        for (char znak : chars2) {
 
             if (Character.isDigit(znak)) {
                 suma += (int) znak - 48;
             }
         }
-        System.out.println("Suma cyfr z tekstu: " + Integer.toString(licznikOstatniaLitera ));
+        System.out.println("Suma cyfr z tekstu: " + Integer.toString(suma));
 
         //7
         System.out.println("Podaj znak (szyrf Cezara)");
